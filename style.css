@@ -1,1 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+.container {
+  width: 95%;
+  margin: auto;
+  padding: 15px;
+}
+h1 {
+  font-size: 1.5rem;
+}
+.search-box {
+  display: flex;
+  flex-direction: column; /* stacked on mobile */
+  gap: 10px;
+  margin-bottom: 15px;
+}
+input, button, select {
+  padding: 12px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.results {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 column */
+  gap: 15px;
+  margin-top: 20px;
+}
+.card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  background: #fff;
+  cursor: pointer;
+}
+.card img {
+  width: 100%;
+}
+#mealDetails {
+  margin-top: 20px;
+}
+@media (min-width: 700px) {
 
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .search-box {
+    flex-direction: row; /* side-by-side */
+  }
+
+  input {
+    width: 70%;
+  }
+
+  button {
+    width: 30%;
+  }
+  .results {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+}
+@media (min-width: 1080px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  .results {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  }
+  .container {
+    max-width: 1000px;
+  }
+}
